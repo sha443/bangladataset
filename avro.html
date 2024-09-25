@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banglish to Bangla Suggestions</title>
+    <script src="https://cdn.jsdelivr.net/npm/avro-js@1.1.4/dist/avro.min.js"></script>
+    <style>
+        input {
+            width: 300px;
+            height: 30px;
+            font-size: 16px;
+        }
+
+        .suggestions {
+            border: 1px solid #ccc;
+            max-width: 300px;
+            font-size: 16px;
+        }
+
+        .suggestions div {
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .suggestions div:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Banglish to Bangla Suggestions</h2>
+    <input type="text" id="banglishInput" placeholder="Type in Banglish..." autocomplete="off">
+    <div id="suggestions" class="suggestions"></div>
+
+    <script>
+        const inputField = document.getElementById('banglishInput');
+        const suggestionsBox = document.getElementById('suggestions');
+
+        inputField.addEventListener('input', function () {
+            const banglishText = inputField.value;
+            const banglaText = Avro.Phonetic.parse(banglishText);
+
+            // Display the converted Bangla text as a suggestion
+            if (banglishText) {
+                suggestionsBox.innerHTML = `<div>${banglaText}</div>`;
+                suggestionsBox.style.display = 'block';
+            } else {
+                suggestionsBox.style.display = 'none';
+            }
+        });
+
+        suggestionsBox.addEventListener('click', function (event) {
+            if (event.target.tagName === 'DIV') {
+                // Replace the input text with the clicked suggestion
+                inputField.value = event.target.textContent;
+                suggestionsBox.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
