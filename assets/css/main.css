@@ -869,46 +869,71 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 70vh; /* Default value for devices not covered by media queries */
+  margin-top: 200px;
   position: relative;
   padding: 180px 0 40px 0;
   display: flex;
   align-items: center;
+  justify-content: center; /* Center content horizontally */
   overflow: hidden;
+}
+
+/* Style for the image inside .hero */
+.hero img {
+  width: 100vw; /* Ensures full width of the viewport */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure image covers the container without distortion */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 /* Mobile view (up to 480px) */
 @media (max-width: 480px) {
   .hero {
-    min-height: 35vh; /* Reduced height for mobile */
-    padding: 120px 0 30px 0; /* Adjust padding for smaller screens */
+    margin-top: 57px;
+    padding: 120px 0 30px 0;
+  }
+  .hero img {
+    width: 100vw; /* Full width for mobile */
+    height: auto; /* Maintain aspect ratio */
   }
 }
 
 /* Tablet view (481px - 1023px) */
 @media (min-width: 481px) and (max-width: 1023px) {
   .hero {
-    min-height: 55vh; /* Medium height for tablet */
-    padding: 150px 0 35px 0; /* Adjust padding for tablets */
+    margin-top: 100px;
+    padding: 150px 0 35px 0;
+  }
+  .hero img {
+    width: 100vw; /* Full width for tablet */
+    height: auto; /* Maintain aspect ratio */
   }
 }
 
 /* Web view (1024px and above) */
 @media (min-width: 1024px) {
   .hero {
-    min-height: 80vh; /* Increased height for web */
-    padding: 200px 0 50px 0; /* Adjust padding for large screens */
+    margin-top: 200px;
+    padding: 200px 0 50px 0;
+    min-height: 50vh;
+  }
+  .hero img {
+    width: 100vw; /* Full width for web */
+    height: auto; /* Maintain aspect ratio */
   }
 }
 
-
+/* For images inside hero-bg if needed */
 .hero .hero-bg img {
   position: absolute;
   inset: 0;
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  width: 100vw; /* Full width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure image covers the area */
   z-index: 1;
 }
 
