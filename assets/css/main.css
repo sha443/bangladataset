@@ -891,10 +891,11 @@ section,
 
 /* Mobile view (up to 480px) */
 @media (max-width: 480px) {
-  .hero {
-    margin-top: 57px;
+.hero {
+    margin-top: 85px;
     padding: 120px 0 30px 0;
-  }
+    scale: 1.28;
+}
   .hero img {
     width: 100vw; /* Full width for mobile */
     height: auto; /* Maintain aspect ratio */
