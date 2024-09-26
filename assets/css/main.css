@@ -869,13 +869,38 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 70vh;
+  min-height: 70vh; /* Default value for devices not covered by media queries */
   position: relative;
   padding: 180px 0 40px 0;
   display: flex;
   align-items: center;
   overflow: hidden;
 }
+
+/* Mobile view (up to 480px) */
+@media (max-width: 480px) {
+  .hero {
+    min-height: 35vh; /* Reduced height for mobile */
+    padding: 120px 0 30px 0; /* Adjust padding for smaller screens */
+  }
+}
+
+/* Tablet view (481px - 1023px) */
+@media (min-width: 481px) and (max-width: 1023px) {
+  .hero {
+    min-height: 55vh; /* Medium height for tablet */
+    padding: 150px 0 35px 0; /* Adjust padding for tablets */
+  }
+}
+
+/* Web view (1024px and above) */
+@media (min-width: 1024px) {
+  .hero {
+    min-height: 80vh; /* Increased height for web */
+    padding: 200px 0 50px 0; /* Adjust padding for large screens */
+  }
+}
+
 
 .hero .hero-bg img {
   position: absolute;
