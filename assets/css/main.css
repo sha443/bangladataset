@@ -31,7 +31,7 @@
   /* Default color used for the majority of the text content across the entire website */
   --heading-color: #3e5055;
   /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #388da8;
+  --accent-color: rgb(0, 134, 110);
   /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff;
   /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
@@ -1719,21 +1719,52 @@ section,
   background-color: var(--surface-color);
   box-shadow: 0px 0 20px rgba(0, 0, 0, 0.1);
   box-sizing: content-box;
-  padding: 30px;
+  padding: 40px;
   margin: 40px 30px;
   min-height: 320px;
   display: flex;
   flex-direction: column;
   text-align: center;
   transition: 0.3s;
+  position: relative; /* For the pseudo-element positioning */
+  z-index: 0; /* Ensure other elements don't overlap the effect */
+  cursor: pointer; /* Makes it appear clickable */
+  /*border: 2px solid transparent; !* Add a subtle border *!*/
+  border-radius: 20px;
 }
+
+.testimonials .testimonial-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(75deg, rgb(251, 247, 240), rgba(0, 134, 110, 0.31));
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.3s ease;
+  border-radius: inherit; /* Keeps the glow within rounded corners if you have them */
+}
+
+.testimonials .testimonial-item:hover {
+  transform: scale(1.05); /* Adds a slight zoom effect */
+  box-shadow: 10px 10px 10px rgba(0, 134, 110, 0.31); /* Enhances shadow to appear lifted */
+  border: 0px solid rgba(0, 134, 110, 0.31); /* Highlights the border on hover */
+}
+
+.testimonials .testimonial-item:hover::before {
+  opacity: 1;
+  box-shadow: 0px 0 30px rgb(251, 247, 240);
+}
+
 
 .testimonials .testimonial-item .stars {
   margin-bottom: 15px;
 }
 
 .testimonials .testimonial-item .stars i {
-  color: #ffc107;
+  color: rgba(187, 83, 255, 0.99);
   margin: 0 1px;
 }
 
