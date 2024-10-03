@@ -1740,7 +1740,7 @@ section,
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(75deg, rgb(251, 247, 240), rgba(0, 134, 110, 0.31));
+  background: linear-gradient(75deg, rgb(251, 247, 240), #89d6d5);
   z-index: -1;
   opacity: 0;
   transition: opacity 0.5s ease, transform 0.3s ease;
