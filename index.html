@@ -16,8 +16,8 @@
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+          href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -93,93 +93,283 @@
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <img src="assets/img/custom/logo.png" alt="">
-        <h1 class="sitename">মাতৃভাষা</h1>
-      </a>
+    <a href="index.html" class="logo d-flex align-items-center me-auto">
+      <img src="assets/img/custom/logo.png" alt="">
+      <h1 class="sitename">মাতৃভাষা</h1>
+    </a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html#hero" class="active">Home</a></li>
-          <li><a href="#form">Form</a></li>
-          <li><a href="#about">About</a></li>
-          <!-- <li><a href="index.html#contact">Contact</a></li> -->
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero" class="active">Home</a></li>
+        <li><a href="#form">Form</a></li>
+        <li><a href="#about">About</a></li>
+        <!-- <li><a href="index.#contact">Contact</a></li> -->
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
 
-      <!-- <a class="btn-getstarted" href="index.html#about">Get Started</a> -->
+    <!-- <a class="btn-getstarted" href="index.html#about">Get Started</a> -->
 
+  </div>
+</header>
+
+<main class="main">
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero section">
+
+    <div class="hero-bg">
+      <img src="assets/img/custom/h1img.png">
     </div>
-  </header>
 
-  <main class="main">
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section">
+    <!--      <div class="container text-center">-->
+    <!--        <div class="d-flex flex-column justify-content-center align-items-center">-->
+    <!--          <h1 data-aos="fade-up" class="bangla-text">বাংলা ভাষার সবচেয়ে বড় ডেটা কালেকশনে আপনাকে-->
+    <!--            স্বাগতম ❤️ <br>-->
+    <!--            চলুন সবাই মিলে বাংলা ভাষাকে সংরক্ষণ এবং-->
+    <!--            আরো বেশি সম্মৃদ্ধশালী করি</h1>-->
 
-      <div class="hero-bg">
-        <img src="assets/img/custom/h1img.png">
+    <!--          <div class="d-flex" data-aos="fade-up" data-aos-delay="200">-->
+    <!--            <a href="#about" class="btn-get-started">Get Started</a>-->
+    <!--            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8"-->
+    <!--              class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch-->
+    <!--                Video</span></a>-->
+    <!--          </div>-->
+
+    <!--        </div>-->
+    <!--      </div>-->
+
+  </section><!-- /Hero Section -->
+  </section><!-- /Hero Section -->
+  <section id="Rules">
+    <style>
+      .expandable-div {
+        width: 100%;
+        max-width: 700px;
+        margin: 20px auto;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 24px;
+        background-color: #f9f9f9;
+        border-radius: 20px;
+      }
+
+      /*.expandable-div:hover {*/
+      /*  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);*/
+      /*}*/
+
+      .expandable-div .content {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0 20px;
+        transition: max-height 0.6s ease, opacity 0.4s ease;
+      }
+
+      .expandable-div.expanded .content {
+        max-height: 500px; /* Set a height that accommodates your content */
+        opacity: 1;
+        padding: 20px;
+      }
+
+      .expandable-div button {
+        width: 100%;
+        padding: 15px;
+        background-color: #00866e;
+        color: white;
+        border: none;
+        border-radius: 10px 10px 0 0;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      .expandable-div button:hover {
+        background-color: #00866e;
+      }
+
+      /*.expandable-div button:focus {*/
+      /*  outline: none;*/
+      /*}*/
+
+      .content p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #444;
+        margin-bottom: 10px;
+      }
+
+      .content p b {
+        color: rgb(0, 134, 110);
+      }
+
+      @media (max-width: 600px) {
+        .content p {
+          font-size: 14px;
+        }
+      }
+    </style>
+
+    <div class="expandable-div" id="expandableDiv">
+      <button onclick="toggleContent()">Show Rules</button>
+      <div class="content" id="expandable-content">
+        <h4 style="font-weight: bold">প্রথমে আপনার আঞ্চলিক ভাষা সিলেক্ট করুন, তারপর পরবর্তী শুদ্ধ বাংলা বাক্যগুলিকে  আঞ্চলিক ভাষায় লিখুন।</h4>
+        <h5 style="font-weight: bold">Rules</h5>
+        <ul>
+          <li> দাড়ি কমা  বা কোনো বিরামচিহ্ন দেয়ার প্রয়োজন নেই </li>
+          <li> আঞ্চলিক ভাষা করতে   অবশ্যই বাংলা ভাষায় টাইপ হবে:  মোবাইল থেকে  টাইপ করুন অথবা এখানে গিয়ে টাইপ করুন</li>
+          <li> প্রতিটি শব্দের সাথে মিল রেখে  লেখার চেষ্টা করুন:  </li>
+
+        </ul>
+<table style="border-collapse: collapse; width: 100%;">
+    <tr>
+        <td style="border: 1px solid black; padding: 8px; font-weight: bold">শুদ্ধ</td></td>
+        <td style="border: 1px solid black; padding: 8px;">আমি </td>
+        <td style="border: 1px solid black; padding: 8px;">যখন</td>
+        <td style="border: 1px solid black; padding: 8px;">স্কুলে</td>
+        <td style="border: 1px solid black; padding: 8px;">ছিলাম</td>
+        <td style="border: 1px solid black; padding: 8px;">তখন</td>
+        <td style="border: 1px solid black; padding: 8px;">আমার</td>
+        <td style="border: 1px solid black; padding: 8px;">প্রিয়</td>
+        <td style="border: 1px solid black; padding: 8px;">বিষয়</td>
+        <td style="border: 1px solid black; padding: 8px;">ছিল</td>
+        <td style="border: 1px solid black; padding: 8px;">বাংলা</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid black; padding: 8px;font-weight: bold">বরিশাল</td>
+        <td style="border: 1px solid black; padding: 8px;">মুই</td>
+        <td style="border: 1px solid black; padding: 8px;">যহন</td>
+        <td style="border: 1px solid black; padding: 8px;">ইশকুলে</td>
+        <td style="border: 1px solid black; padding: 8px;">আল্লাম</td>
+        <td style="border: 1px solid black; padding: 8px;">তহন</td>
+        <td style="border: 1px solid black; padding: 8px;">মোর</td>
+        <td style="border: 1px solid black; padding: 8px;">পিরিও</td>
+        <td style="border: 1px solid black; padding: 8px;">বিষয়</td>
+        <td style="border: 1px solid black; padding: 8px;">আল্লে</td>
+        <td style="border: 1px solid black; padding: 8px;">বাংলা</td>
+    </tr>
+</table>
+        <br>
+
+        <h5 style="font-weight: bold">Examples</h5>
+        <p><b>শুদ্ধ:</b> আমি যখন স্কুলে ছিলাম তখন আমার প্রিয় বিষয় ছিল বাংলা</p>
+        <p><b>বরিশাল:</b> মুই যহন ইশকুলে আল্লাম তহন মোর পিরিও বিষয় আল্লে বাংলা</p>
+        <p><b>চট্টগ্রাম:</b> আঁই যেত্তে স্কুলত আঁসছিলাম আঁর প্রিয় বিষয় আঁস্সিলদে বাংলা</p>
+        <p><b>সিলেট:</b> আমি যখন স্কুলো আছলাম নানি তখন আমার ফছন্দের সাবজেক্ট আছিল বাংলা</p>
+        <p><b>রংপুর:</b> মুই যখন স্কুলত আছিনু তখন মোর পিয় বিষয় আছিলো বাংলা</p>
+
+        <body>
+        </body>
       </div>
+    </div>
+
+    <script>
+      function toggleContent() {
+        var div = document.getElementById('expandableDiv');
+        var button = div.querySelector('button');
+        if (div.classList.contains('expanded')) {
+          div.classList.remove('expanded');
+          button.textContent = 'Show Rules';
+        } else {
+          div.classList.add('expanded');
+          button.textContent = 'Hide Rules';
+        }
+      }
+    </script>
+  </section>
+  <style>
+    .expandable-div {
+      width: 100%;
+      max-width: 700px;
+      margin: 20px auto;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      background-color: rgba(249, 249, 249, 0);
+    }
+
+    .expandable-div .content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out;
+    }
+
+    .expandable-div.expanded .content {
+      max-height: 1000px; /* Set a large enough height to accommodate the content */
+      transition: max-height 0.5s ease-in;
+    }
+
+    .expandable-div button {
+      width: 100%;
+      padding: 10px;
+      background-color: rgb(0, 134, 110);
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .expandable-div button:focus {
+      outline: none;
+    }
+  </style>
 
 
-      <!--      <div class="container text-center">-->
-      <!--        <div class="d-flex flex-column justify-content-center align-items-center">-->
-      <!--          <h1 data-aos="fade-up" class="bangla-text">বাংলা ভাষার সবচেয়ে বড় ডেটা কালেকশনে আপনাকে-->
-      <!--            স্বাগতম ❤️ <br>-->
-      <!--            চলুন সবাই মিলে বাংলা ভাষাকে সংরক্ষণ এবং-->
-      <!--            আরো বেশি সম্মৃদ্ধশালী করি</h1>-->
 
-      <!--          <div class="d-flex" data-aos="fade-up" data-aos-delay="200">-->
-      <!--            <a href="#about" class="btn-get-started">Get Started</a>-->
-      <!--            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8"-->
-      <!--              class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch-->
-      <!--                Video</span></a>-->
-      <!--          </div>-->
+  <script>
+    function toggleContent() {
+      var div = document.getElementById('expandableDiv');
+      var button = div.querySelector('button');
+      if (div.classList.contains('expanded')) {
+        div.classList.remove('expanded');
+        button.textContent = 'Show Rules';
+      } else {
+        div.classList.add('expanded');
+        button.textContent = 'Hide Rules';
+      }
+    }
+  </script>
+  </section>
 
-      <!--        </div>-->
-      <!--      </div>-->
-
-    </section><!-- /Hero Section -->
-
-
-    <section id="form">
-      <div class="container">
-        <div class="row justify-content-center align-items-center">
-          <iframe id="formFrame" width="100%" height="1500px" frameborder="0" style="border: none; overflow: auto;"
-            allowfullscreen>
-          </iframe>
-        </div>
+  <section id="form">
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <iframe id="formFrame" width="100%" height="1500px" frameborder="0" style="border: none; overflow: auto;"
+                allowfullscreen>
+        </iframe>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="about">
-      <div class="container section-title" data-aos="fade-up" style="font-family:'Baloo Da 2', sans-serif">
-        <h2>About</h2>
-        <h5>আমরা সবাইকে বাংলা ভাষাকে উদযাপন ও রক্ষা করতে একসাথে কাজ করার জন্য আমন্ত্রণ জানাচ্ছি। আমাদের লক্ষ্য শুধু
-          বাংলা
-          ভাষা নয়, দেশের নানা অঞ্চলের সুন্দর আঞ্চলিক ভাষাগুলোও বাঁচিয়ে রাখা। </h5>
+  <section id="about">
+    <div class="container section-title" data-aos="fade-up" style="font-family:'Baloo Da 2', sans-serif">
+      <h2>About</h2>
+      <h5>আমরা সবাইকে বাংলা ভাষাকে উদযাপন ও রক্ষা করতে একসাথে কাজ করার জন্য আমন্ত্রণ জানাচ্ছি। আমাদের লক্ষ্য শুধু
+        বাংলা
+        ভাষা নয়, দেশের নানা অঞ্চলের সুন্দর আঞ্চলিক ভাষাগুলোও বাঁচিয়ে রাখা। </h5>
 
-        <h5>সিলেটের টান, চট্টগ্রামের ভিন্ন ধ্বনি, নোয়াখালীর প্রাণবন্ত ভাষা, খুলনার মিষ্টি সুর — প্রত্যেকটা ভাষাই আমাদের
-          সংস্কৃতির অংশ। </h5>
+      <h5>সিলেটের টান, চট্টগ্রামের ভিন্ন ধ্বনি, নোয়াখালীর প্রাণবন্ত ভাষা, খুলনার মিষ্টি সুর — প্রত্যেকটা ভাষাই আমাদের
+        সংস্কৃতির অংশ। </h5>
 
-        <H5>আসুন, একসাথে বাংলার সব রূপকে বরণ করি, যাতে এটি শহর থেকে গ্রাম পর্যন্ত ছড়িয়ে পড়ে। QR কোড স্ক্যান করে আমাদের
-          সাথে যোগ দিন, আর ভাষার ঐতিহ্য রক্ষা করতে এগিয়ে আসুন!</h5>
-      </div>
-      <section id="testimonials" class="testimonials section light-background">
+      <H5>আসুন, একসাথে বাংলার সব রূপকে বরণ করি, যাতে এটি শহর থেকে গ্রাম পর্যন্ত ছড়িয়ে পড়ে। QR কোড স্ক্যান করে আমাদের
+        সাথে যোগ দিন, আর ভাষার ঐতিহ্য রক্ষা করতে এগিয়ে আসুন!</h5>
+    </div>
+    <section id="testimonials" class="testimonials section light-background">
 
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Team</h2>
-        </div><!-- End Section Title -->
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Team</h2>
+      </div><!-- End Section Title -->
 
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-          <div class="swiper init-swiper">
-            <script type="application/json" class="swiper-config">
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
             {
               "loop": true,
               "speed": 600,
@@ -204,211 +394,219 @@
               }
             }
           </script>
-            <div class="swiper-wrapper">
+          <div class="swiper-wrapper">
 
-              <div class="swiper-slide">
-                <div class="testimonial-item" id="bidita">
+            <div class="swiper-slide">
+              <div class="testimonial-item" id="bidita">
 
-                  <div class="profile mt-auto">
-                    <img src="assets/img/team/bidita.jfif" class="testimonial-img" alt="">
-                    <h3>Bidita Sarker Diba </h3>
-                    <h4>Research Associate</h4>
-                  </div>
-                  <p> <small>
-                      Teaching Assistant, CSE, UAP</small>
-                  </p>
+                <div class="profile mt-auto">
+                  <img src="assets/img/team/bidita.jfif" class="testimonial-img" alt="">
+                  <h3>Bidita Sarker Diba </h3>
+                  <h4>Research Associate</h4>
                 </div>
-              </div><!-- End testimonial item -->
-
-              <div class="swiper-slide">
-                <div class="testimonial-item" id="shahid">
-                  <div class="profile mt-auto">
-                    <img src="assets/img/team/shahid.jpg" class="testimonial-img" alt="">
-                    <h3>Md. Shahidul Islam</h3>
-                    <h4>Principal Investigator</h4>
-
-                  </div>
-                  <p> <small>
-                      Assistant Professor, CSE, UAP
-                    </small>
-                  </p>
-
-                </div>
-              </div><!-- End testimonial item -->
-
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-
-                  <div class="profile mt-auto" id="durjoy">
-                    <img src="assets/img/team/durjoy.png" class="testimonial-img" alt="">
-                    <h3>Durjoy Mistry</h3>
-                    <h4>Co-Investigator</h4>
-                  </div>
-                  <p> <small>
-                      Lecturer, CSE, UAP</small>
-                  </p>
-                </div>
-              </div><!-- End testimonial item -->
-
-              <div class="swiper-slide">
-                <div class="testimonial-item" id="murtaza">
-
-                  <div class="profile mt-auto">
-                    <img src="assets/img/team/murtaza.jpeg" class="testimonial-img" alt="">
-                    <h3>Dr. Shah Murtaza Rashid Al Masud </h3>
-                    <h4>Co-Investigator</h4>
-                  </div>
-                  <p> <small>
-                      Professor &amp; Head, CSE, UAP</small>
-                  </p>
-                </div>
-              </div><!-- End testimonial item -->
-
-              <div class="swiper-slide">
-                <div class="testimonial-item" id="plabon">
-
-                  <div class="profile mt-auto">
-                    <img src="assets/img/team/plabon.jfif" class="testimonial-img" alt="">
-                    <h3>Jayonto Dutta Plabon
-                    </h3>
-                    <h4>Research Associate</h4>
-                  </div>
-                  <p> <small>
-                      Teaching Assistant, CSE, UAP</small>
-                  </p>
-                </div>
-              </div><!-- End testimonial item -->
-
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-
-        </div>
-
-      </section><!-- /Testimonials Section -->
-
-      <!-- Contact Section -->
-      <section id="contact" class="contact section">
-
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Contact</h2>
-        </div><!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="row gy-4">
-
-            <div class="col-lg-6">
-              <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up"
-                data-aos-delay="200">
-                <i class="bi bi-geo-alt"></i>
-                <h3>Address</h3>
-                <p>University of Asia Pacific<br> 74/A, Green Road, Dhaka 1205</p>
+                <p> <small>
+                  Teaching Assistant, CSE, UAP</small>
+                </p>
               </div>
-            </div><!-- End Info Item -->
+            </div><!-- End testimonial item -->
 
+            <div class="swiper-slide">
+              <div class="testimonial-item" id="shahid">
+                <div class="profile mt-auto">
+                  <img src="assets/img/team/shahid.jpg" class="testimonial-img" alt="">
+                  <h3>Md. Shahidul Islam</h3>
+                  <h4>Principal Investigator</h4>
 
-            <div class="col-lg-6 col-md-6">
-              <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up"
-                data-aos-delay="400">
-                <i class="bi bi-envelope"></i>
-                <h3>Email Us</h3>
-                <p>shahid@uap-bd.edu <br> durjoy@uap-bd.edu</p>
+                </div>
+                <p> <small>
+                  Assistant Professor, CSE, UAP
+                </small>
+                </p>
+
               </div>
-            </div><!-- End Info Item -->
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+
+                <div class="profile mt-auto" id="durjoy">
+                  <img src="assets/img/team/durjoy.png" class="testimonial-img" alt="">
+                  <h3>Durjoy Mistry</h3>
+                  <h4>Co-Investigator</h4>
+                </div>
+                <p> <small>
+                  Lecturer, CSE, UAP</small>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" id="murtaza">
+
+                <div class="profile mt-auto">
+                  <img src="assets/img/team/murtaza.jpeg" class="testimonial-img" alt="">
+                  <h3>Dr. Shah Murtaza Rashid Al Masud </h3>
+                  <h4>Co-Investigator</h4>
+                </div>
+                <p> <small>
+                  Professor &amp; Head, CSE, UAP</small>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" id="plabon">
+
+                <div class="profile mt-auto">
+                  <img src="assets/img/team/plabon.jfif" class="testimonial-img" alt="">
+                  <h3>Jayonto Dutta Plabon
+                  </h3>
+                  <h4>Research Associate</h4>
+                </div>
+                <p> <small>
+                  Teaching Assistant, CSE, UAP</small>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
 
           </div>
-
+          <div class="swiper-pagination"></div>
         </div>
 
-      </section><!-- /Contact Section -->
-
-  </main>
-
-  <footer id="footer" class="footer position-relative light-background">
-
-    <div class="container copyright text-center mt-4">
-      <p> <span>Made with </span> <strong class="px-1 sitename">💗</strong><span> by <a
-            href="https://github.com/sha443">Shahid</a> | <a href="https://linktr.ee/heydurjoy">Durjoy</a> </span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up"
+                 data-aos-delay="200">
+              <i class="bi bi-geo-alt"></i>
+              <h3>Address</h3>
+              <p>University of Asia Pacific<br> 74/A, Green Road, Dhaka 1205</p>
+            </div>
+          </div><!-- End Info Item -->
+
+
+          <div class="col-lg-6 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up"
+                 data-aos-delay="400">
+              <i class="bi bi-envelope"></i>
+              <h3>Email Us</h3>
+              <p>shahid@uap-bd.edu <br> durjoy@uap-bd.edu</p>
+            </div>
+          </div><!-- End Info Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+</main>
+
+<footer id="footer" class="footer position-relative light-background">
+
+  <div class="container copyright text-center mt-4">
+    <p> <span>Made with </span> <strong class="px-1 sitename">💗</strong><span> by <a
+            href="https://github.com/sha443">Shahid</a> | <a href="https://linktr.ee/heydurjoy">Durjoy</a> </span></p>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you've purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
     </div>
+  </div>
 
-  </footer>
+</footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+<!-- Preloader -->
+<div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+<!-- Main JS File -->
+<script src="assets/js/main.js"></script>
 
-  <script>
-    var iframe = document.getElementById('googleForm');
+<script>
+  var iframe = document.getElementById('googleForm');
 
-    // Adjust height based on iframe content
-    iframe.onload = function () {
-      iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-    };
-  </script>
+  // Adjust height based on iframe content
+  iframe.onload = function () {
+    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+  };
+</script>
 
-  <script>
-    // Function to handle the navigation
-    function goToLink(link) {
-      window.open(link, '_blank');  // Opens the link in a new tab
-    }
+<script>
+  // Function to handle the navigation
+  function goToLink(link) {
+    window.open(link, '_blank');  // Opens the link in a new tab
+  }
 
-    // Assign onclick functions to each element
-    document.getElementById('shahid').onclick = function () {
-      goToLink('https://scholar.google.com/citations?user=4ugcylUAAAAJ&hl=en');
-    };
-    document.getElementById('durjoy').onclick = function () {
-      goToLink('https://scholar.google.com/citations?user=sdsnA6oAAAAJ&hl=en&oi=ao');
-    };
-    document.getElementById('murtaza').onclick = function () {
-      goToLink('https://scholar.google.com/citations?user=RfilYIgAAAAJ&hl=en&oi=ao');
-    };
-    document.getElementById('plabon').onclick = function () {
-      goToLink('https://scholar.google.com/citations?user=Rt2lAwsAAAAJ&hl=en&oi=ao');
-    };
-    document.getElementById('bidita').onclick = function () {
-      goToLink('https://scholar.google.com/citations?user=819ox1AAAAAJ&hl=en&oi=ao');
-    };
-  </script>
+  // Assign onclick functions to each element
+  document.getElementById('shahid').onclick = function () {
+    goToLink('https://scholar.google.com/citations?user=4ugcylUAAAAJ&hl=en');
+  };
+  document.getElementById('durjoy').onclick = function () {
+    goToLink('https://scholar.google.com/citations?user=sdsnA6oAAAAJ&hl=en&oi=ao');
+  };
+  document.getElementById('murtaza').onclick = function () {
+    goToLink('https://scholar.google.com/citations?user=RfilYIgAAAAJ&hl=en&oi=ao');
+  };
+  document.getElementById('plabon').onclick = function () {
+    goToLink('https://scholar.google.com/citations?user=Rt2lAwsAAAAJ&hl=en&oi=ao');
+  };
+  document.getElementById('bidita').onclick = function () {
+    goToLink('https://scholar.google.com/citations?user=819ox1AAAAAJ&hl=en&oi=ao');
+  };
+</script>
 
-  <script>
-    // Array of 10 Google Form URLs
-    var formUrls = [
-      'https://docs.google.com/forms/d/e/1FAIpQLSfqWQiqtooq9evMnDPJVRAvmoyMug81m3UKf6A29kpECcuZcg/viewform?embedded=true',
-      'https://docs.google.com/forms/d/e/1FAIpQLScLVH4jhHPsskfWgidMbq9kviCSiSNm5XehctljGkCSjX0ajg/viewform?embedded=true',
+<script>
+  // Array of 10 Google Form URLs
+  var formUrls = [
+    'https://docs.google.com/forms/d/13pMLDmp2O6JJPxIHyS3fGSJimJkIL948hHPqwK8hI2Y',
+    'https://docs.google.com/forms/d/1q3DQODKqohcqi8TmAd7_pND_jzgrk1zcyUjK-jQqVek',
+    'https://docs.google.com/forms/d/1fT-UApqKJae_hiU0WrbLZvjKXfyJU_-MJWgzV_T722w',
+    'https://docs.google.com/forms/d/1jxYPfLJ1HCLWj-pZA-h8hhXZiHbTbeinDQF9c2cOkgo',
+    'https://docs.google.com/forms/d/1H2XMjgQMfa1XawIOEQIu7sFEzGK1Cx8-2uvKbsq6al4',
+    'https://docs.google.com/forms/d/1CHATkYp4XxbGTKezdoJOmTlCLmaSTPxjh1MAaPvgEL8',
+    'https://docs.google.com/forms/d/1fxEFAhcarf1pQRsMmV_EUBmWT3xLdbCNtnT2SJqr-0M',
+    'https://docs.google.com/forms/d/1ZhcoxIYmx4m5mRyFAfqK05PMQgU210wCDvjobpvH9fU',
+    'https://docs.google.com/forms/d/1Jvs4Rj-u6aQzaX1An-AzRbGWd3x1eBR2Nsbu-RxAN-s',
+    'https://docs.google.com/forms/d/1s4CQ-EU8SaHg9QW1OAtyNZ2kDaNDjJcF11AEAncigEM',
+    'https://docs.google.com/forms/d/1I6K-r76dd-96J8wukmCjoi8xvZtMj8pu_j13a3WpCbI'
+  ];
 
-    ];
+  // Function to get a random form URL
+  function getRandomForm() {
+    var randomIndex = Math.floor(Math.random() * formUrls.length);
+    return formUrls[randomIndex];
+  }
 
-    // Function to get a random form URL
-    function getRandomForm() {
-      var randomIndex = Math.floor(Math.random() * formUrls.length);
-      return formUrls[randomIndex];
-    }
-
-    // Set the iframe src attribute to a random form URL
-    document.getElementById('formFrame').src = getRandomForm();
-  </script>
+  // Set the iframe src attribute to a random form URL
+  document.getElementById('formFrame').src = getRandomForm();
+</script>
 
 </body>
 
